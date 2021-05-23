@@ -1,7 +1,7 @@
 class TrieNode{
 	public:
 		char data;
-		TreeNode** children;
+		TrieNode** children;
 		bool isTerminal;
 	
 	TrieNode(char data){

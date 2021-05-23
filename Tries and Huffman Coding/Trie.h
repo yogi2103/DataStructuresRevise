@@ -1,3 +1,4 @@
+#include "TrieNode.h"
 class Trie{
 	TrieNode* root;
 	public:
