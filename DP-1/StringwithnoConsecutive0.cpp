@@ -9,3 +9,6 @@ int main(){
 		int temp=one;
 		one=zero+one;
 		zero=temp;
+	}
+cout<<one+zero;
+}
