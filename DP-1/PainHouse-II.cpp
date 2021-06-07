@@ -11,9 +11,12 @@ int main(){
 		}
 	}
 	
+	//starting with the next array
 	for(int i=1;i<n;i++){
+		//for as many colors 
 		for(int j=0;j<k;j++){
 			int mini=999999;
+			//for each color choosing the minimum cost
 			for(int q=0;q<k;q++){
 				if(j==q){ 
 					continue;
@@ -23,6 +26,8 @@ int main(){
 			arr[i][j]+=mini;
 		}
 	}
+	
+	//finally finding the minimum cost among all the houses
 	int final=INT_MAX;
 	for(int i=0;i<k;i++){
 		final=min(final,arr[n-1][i]);
