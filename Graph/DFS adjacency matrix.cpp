@@ -6,7 +6,7 @@ void printBFS(int** edges,int sv,int n,bool* visited){
 	queue<int>q;
 	q.push(sv);
 	while(!q.empty()){
-		cout<<q.front();
+		cout<<q.front()<<" ";
 		visited[q.front()]=true;
 		for(int i=0;i<n;i++){
 			if(!visited[i] && edges[q.front()][i]==1){
@@ -16,6 +16,13 @@ void printBFS(int** edges,int sv,int n,bool* visited){
 		}
 		q.pop();
 	}
+}
+
+void printBFSHelper(int** edges,int sv,int n,bool* visited){
+    for(int i=0;i<n;i++){
+        if(!visited[i])
+        	printBFS(edges,i,n,visited);
+    }
 }
 
 void printDFS(int** edges,int sv,int n,bool* visited){
@@ -53,5 +60,5 @@ int main(){
 		visited[i]=false;
 	}
 	
-	printBFS(edges,0,n,visited);
+	printBFSHelper(edges,0,n,visited);
 }
