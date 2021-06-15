@@ -24,8 +24,8 @@ class Solution
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
 	    // code here
-	    Vector<int>& visited(V,false);
-	    stack<int>& s;
+	    vector<int> visited(V,false);
+	    stack<int> s;
 	    for(int i=0;i<V;i++){
 	    	if(!visited[i]){
 	    		topoSortHelper(i,V,adj,visited,s);
