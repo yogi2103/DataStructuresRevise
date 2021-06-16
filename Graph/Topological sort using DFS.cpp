@@ -14,7 +14,7 @@ class Solution
 	void topoSortHelper(int start,int V, vector<int> adj[],vector<int>& visited,stack<int>& s) {
 		visited[start]=true;
 		for(auto it:adj[start]){
-			if(!visited[i]){
+			if(!visited[it]){
 				topoSortHelper(it,V,adj,visited,start);
 			}
 		}
