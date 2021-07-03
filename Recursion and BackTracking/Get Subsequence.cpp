@@ -6,7 +6,7 @@ vector<string> gss(string s){
     // write your code here
     if(s.size()==0){
     	vector<string> v;
-    	v.push_back(" ");
+    	v.push_back("");
     	return v;
 	}
     char small=s[0];
@@ -19,6 +19,10 @@ vector<string> gss(string s){
 	for(auto& it: smalloutput){
 		output.push_back(small+it);
 	}
+//	for(auto& it: smalloutput){
+//    	output.push_back(it);
+//    	output.push_back(small+it);
+//	}
 	return output;
 }
 
