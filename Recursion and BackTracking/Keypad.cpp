@@ -1,10 +1,10 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 vector<string> letterCombinationsHelper(string digits,vector<string> bag){
         if(digits.length()==0){
             vector<string> s;
-            s.push("");
+            s.push_back("");
             return s;
         }
         
@@ -22,6 +22,6 @@ vector<string> letterCombinationsHelper(string digits,vector<string> bag){
     }
     
 vector<string> letterCombinations(string digits) {
-        vector<string> bag=["","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"];
+        vector<string> bag{"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
         return letterCombinationsHelper(digits,bag);
 }
