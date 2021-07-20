@@ -24,7 +24,8 @@ bool isValid(int board[][9],int x,int y,int val){
 			return false;
 	}
 	
-	int smi= x/3* 3;
+	
+	int smi= x/3* 3;	//it is for finding the starting point of each matrix
 	int smj =y/3* 3;
 	for(int i=0;i<3;i++){
 		for(int j=0;j<3;j++){
@@ -43,7 +44,7 @@ void sudokuSolver(int board[][9],int i,int j){
 	}
 	
 	int nexti=0;
-	int nextj=0;
+	int nextj=0; 
 	
 	if(j==8){
 		nexti=i+1;
@@ -55,7 +56,7 @@ void sudokuSolver(int board[][9],int i,int j){
 	}
 	
 	if(board[i][j]!=0){
-		sudokuSolver(board,i,j);
+		sudokuSolver(board,nexti,nextj);
 	}
 	else{
 		for(int options=1;options<=9;options++){
