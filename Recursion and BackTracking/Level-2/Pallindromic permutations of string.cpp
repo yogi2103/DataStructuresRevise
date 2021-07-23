@@ -2,6 +2,7 @@
 #include<unordered_map>
 using namespace std;
 
+
 void generatePallindromicPermutation(int cs,int ts,unordered_map<char,int> m,char oddc,string asf){
 	if(cs>ts){
 		string rev="";
@@ -9,6 +10,7 @@ void generatePallindromicPermutation(int cs,int ts,unordered_map<char,int> m,cha
 			rev+=asf[i]; 
 		}
 		string res =asf;		
+		//for placing the odd character in between all characters
 		if(oddc!=' '){
 			res+=oddc;
 		}
