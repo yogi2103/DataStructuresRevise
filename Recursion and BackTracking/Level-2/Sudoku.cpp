@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//for printing the array
 void display(int arr[][9]){
 	for(int i=0;i<9;i++){
 		for(int j=0;j<9;j++){
