@@ -30,7 +30,7 @@ bool safeplace(vector<vector<bool>>chess,int row,int col){
 	return true;
 }
 
-#the point here is that we can place only one queen at each row.
+//the point here is that we can place only one queen at each row.
 
 void Nqueens(vector<vector<bool>>chess,string qsf,int row){
 	
